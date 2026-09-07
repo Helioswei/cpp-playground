@@ -1,6 +1,6 @@
 # notes/ — 读书笔记（Effective C++）
 
-源仓库：`Helioswei/booknotes`
+源仓库：`booknotes（原仓库已删除）`
 
 - `effective/`  按条款组织的 C++ 头文件笔记 + 演示 `main.cpp`
 - 参考 PDF 电子书统一放在仓库根 `books/`（Git LFS）

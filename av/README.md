@@ -1,6 +1,6 @@
 # av/ — ffmpeg 转码 / 滤镜 / 编码实验
 
-源仓库：`Helioswei/testffmpeg`
+源仓库：`testffmpeg（原仓库已删除）`
 
 - `engine/`  核心实验：`encoder/` `filter/` `hw/` `transcode/`，每个 `.cpp` 是一个独立 main 用例
 - `ref/`     参考资料

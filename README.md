@@ -9,14 +9,16 @@
 
 ## 目录结构与源仓库对照
 
-| 模块 | 源仓库 | 内容 |
+| 模块 | 源仓库（已删除†） | 内容 |
 |---|---|---|
-| `notes/` | Helioswei/**booknotes** | Effective C++ 等读书笔记 + 条款实验代码 |
-| `patterns/` | Helioswei/**designPatterns** | GoF 设计模式 C++ 实现（创建型/结构型/行为型） |
-| `net/` | Helioswei/**testmongoose** | mongoose 7.1 上传/服务示例（内置源，自含） |
-| `av/` | Helioswei/**testffmpeg** | ffmpeg 转码 / 滤镜 / 编码实验 |
-| `lib-sandbox/` | Helioswei/**testcode** | 第三方开源库试用（opencv / poco / mupdf …） |
+| `notes/` | booknotes | Effective C++ 等读书笔记 + 条款实验代码 |
+| `patterns/` | designPatterns | GoF 设计模式 C++ 实现（创建型/结构型/行为型） |
+| `net/` | testmongoose | mongoose 7.1 上传/服务示例（内置源，自含） |
+| `av/` | testffmpeg | ffmpeg 转码 / 滤镜 / 编码实验 |
+| `lib-sandbox/` | testcode | 第三方开源库试用（opencv / poco / mupdf …） |
 | `books/` | — | 参考 PDF 电子书集中存放（版权归原作者，仅供学习） |
+
+† 五个源仓库已于 2026-09-08 删除，本仓库为其唯一留存，上表仅作内容溯源。
 
 ```
 cpp-playground/
@@ -44,7 +46,7 @@ cpp-playground/
 ```bash
 xmake                 # 编译默认组
 xmake run effective   # 运行读书示例（或 notes 各 target）
-xmake run pat_visitor # 运行某个设计模式
+xmake run pat_state    # 运行某个设计模式
 xmake run net-http-demo
 ```
 
@@ -70,4 +72,4 @@ xmake -g sandbox
 
 ## 迁移说明
 
-本次为一次性的仓库归并，五个源仓库各自的 git 历史未并入（新仓为全新提交）；旧仓库可在核对无误后归档/删除。
+本次为一次性的仓库归并：五个源仓库（booknotes / designPatterns / testcode / testmongoose / testffmpeg）于 2026-09-08 删除，其 git 历史未并入本仓。`cpp-playground` 现为这些内容的唯一规范留存。

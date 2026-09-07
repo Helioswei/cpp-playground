@@ -1,6 +1,6 @@
 # lib-sandbox/ — 第三方开源库试用
 
-源仓库：`Helioswei/testcode`
+源仓库：`testcode（原仓库已删除）`
 
 每个子目录试用一个开源库（含独立 `main` 的 `.cpp` 即一个 demo）。目录与依赖：
 
