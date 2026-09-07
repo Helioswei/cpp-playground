@@ -11,17 +11,18 @@
 | `net/` | Helioswei/**testmongoose** | mongoose 7.1 上传/服务示例（内置源，自含） |
 | `av/` | Helioswei/**testffmpeg** | ffmpeg 转码 / 滤镜 / 编码实验 |
 | `lib-sandbox/` | Helioswei/**testcode** | 第三方开源库试用（opencv / poco / mupdf …） |
+| `books/` | — | 参考 PDF 电子书集中存放（版权归原作者，仅供学习） |
 
 ```
 cpp-playground/
 ├── xmake.lua
 ├── README.md
+├── LICENSE            # MIT（仅覆盖本仓库原创代码）
+├── books/             # 参考 PDF 电子书（集中管理，Git LFS）
 ├── notes/            ← booknotes（默认编译）
-│   ├── effective/    # 条款头文件 + 演示 main（改 include 行切条款）
-│   └── ref/          # 参考 PDF（Git LFS）
+│   └── effective/    # 条款头文件 + 演示 main（改 include 行切条款）
 ├── patterns/         ← designPatterns（默认编译）
-│   ├── creational/ structural/ behavioral/
-│   └── ref/          # 参考 PDF（Git LFS）
+│   └── creational/ structural/ behavioral/
 ├── net/              ← testmongoose（默认编译）
 │   └── thirdparty/mongoose
 ├── av/               ← testffmpeg（--av=y 启用）

@@ -1,6 +1,6 @@
 # patterns/ — GoF 设计模式（C++）
 
-源仓库：`Helioswei/designPatterns`。`ref/` 为 PDF 参考书（Git LFS）。
+源仓库：`Helioswei/designPatterns`。参考 PDF 电子书统一放在仓库根 `books/`（Git LFS）。
 
 ```bash
 xmake run pat_visitor          # 不行 —— 见下

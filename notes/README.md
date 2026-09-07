@@ -3,7 +3,7 @@
 源仓库：`Helioswei/booknotes`
 
 - `effective/`  按条款组织的 C++ 头文件笔记 + 演示 `main.cpp`
-- `ref/`        PDF 参考书（Git LFS）
+- 参考 PDF 电子书统一放在仓库根 `books/`（Git LFS）
 
 运行（编辑 `effective/main.cpp` 顶部的 `#include` 切换要验证的条款，与原仓库习惯一致）：
 ```bash
