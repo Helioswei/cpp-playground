@@ -1,42 +1,29 @@
 # cpp-playground
 
-个人 C++ 学习积累库（monorepo）。原五个独立开源仓库合并而来，统一用 [xmake](https://xmake.io) 构建。
+个人 C++ 学习积累库（monorepo）：读书记录、设计模式、网络与多媒体实验、三方库试用，统一用 [xmake](https://xmake.io) 构建。
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Language: C++](https://img.shields.io/badge/language-C%2B%2B-blueviolet.svg)
 ![Build: xmake](https://img.shields.io/badge/build-xmake-2f93e0)
-![Monorepo: 5 repos merged](https://img.shields.io/badge/monorepo-5_repos_merged-lightgrey)
 
-## 目录结构与源仓库对照
-
-| 模块 | 源仓库（已删除†） | 内容 |
-|---|---|---|
-| `notes/` | booknotes | Effective C++ 等读书笔记 + 条款实验代码 |
-| `patterns/` | designPatterns | GoF 设计模式 C++ 实现（创建型/结构型/行为型） |
-| `net/` | testmongoose | mongoose 7.1 上传/服务示例（内置源，自含） |
-| `av/` | testffmpeg | ffmpeg 转码 / 滤镜 / 编码实验 |
-| `lib-sandbox/` | testcode | 第三方开源库试用（opencv / poco / mupdf …） |
-| `books/` | — | 参考 PDF 电子书集中存放（版权归原作者，仅供学习） |
-
-† 五个源仓库已于 2026-09-08 删除，本仓库为其唯一留存，上表仅作内容溯源。
+## 目录结构
 
 ```
 cpp-playground/
 ├── xmake.lua
-├── README.md
 ├── LICENSE            # MIT（仅覆盖本仓库原创代码）
 ├── books/             # 参考 PDF 电子书（集中管理，Git LFS）
-├── notes/            ← booknotes（默认编译）
-│   └── effective/    # 条款头文件 + 演示 main（改 include 行切条款）
-├── patterns/         ← designPatterns（默认编译）
+├── notes/             # Effective C++ 条款笔记 + 演示代码（默认编译）
+│   └── effective/
+├── patterns/          # GoF 设计模式实现：创建型/结构型/行为型（默认编译）
 │   └── creational/ structural/ behavioral/
-├── net/              ← testmongoose（默认编译）
-│   └── thirdparty/mongoose
-├── av/               ← testffmpeg（--av=y 启用）
+├── net/               # mongoose 7.1 网络示例（内置源，自含，默认编译）
+│   └── network/ thirdparty/mongoose/
+├── av/                # ffmpeg 转码/滤镜/编码实验（--av=y 启用）
 │   ├── engine/
-│   └── ref/          # Windows 参考工程 / ffmpeg 版本报告
-└── lib-sandbox/      ← testcode（--sandbox=y 启用）
-    └── <各库试用>/
+│   └── ref/           # Windows 参考工程 / ffmpeg 版本报告
+└── lib-sandbox/       # 第三方开源库试用（--sandbox=y 启用）
+    └── opencv/ poco/ mupdf/ amqpcpp/ …
 ```
 
 ## 构建
@@ -45,8 +32,8 @@ cpp-playground/
 
 ```bash
 xmake                 # 编译默认组
-xmake run effective   # 运行读书示例（或 notes 各 target）
-xmake run pat_state    # 运行某个设计模式
+xmake run effective   # 运行读书示例（编辑 effective/main.cpp 的 include 切条款）
+xmake run pat_state   # 运行某个设计模式
 xmake run net-http-demo
 ```
 
@@ -66,10 +53,7 @@ xmake -g sandbox
 
 ## 约定
 
-- **一个含 `main()` 的源码文件/目录 = 一个可执行 target**；命名 `pat_*` / `av_*` / `sb_*` 区分来源。
-- 合并时已**剔除**各源仓库里的编译产物与可执行文件（`test`/`pist`/`opencvtest`、`.dll/.exe`、`out.jpg` 等）。
+- **一个含 `main()` 的源码文件/目录 = 一个可执行 target**；命名 `pat_*` / `av_*` / `sb_*` 区分模块。
+- 头文件/笔记类内容偏重于学习备注，个别条款/用例不保证能独立编译（详见各模块 README）。
 - 参考 PDF 等大文件用 **Git LFS** 管理（见 `.gitattributes`），需先 `git lfs install`。
-
-## 迁移说明
-
-本次为一次性的仓库归并：五个源仓库（booknotes / designPatterns / testcode / testmongoose / testffmpeg）于 2026-09-08 删除，其 git 历史未并入本仓。`cpp-playground` 现为这些内容的唯一规范留存。
+- `books/` 电子书为第三方版权作品，仅供个人学习，不属于 MIT 许可范围（见 `books/README.md`）。
