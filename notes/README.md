@@ -1,0 +1,13 @@
+# notes/ — 读书笔记（Effective C++）
+
+源仓库：`Helioswei/booknotes`
+
+- `effective/`  按条款组织的 C++ 头文件笔记 + 演示 `main.cpp`
+- `ref/`        PDF 参考书（Git LFS）
+
+运行（编辑 `effective/main.cpp` 顶部的 `#include` 切换要验证的条款，与原仓库习惯一致）：
+```bash
+xmake build effective
+xmake run effective
+```
+> 说明：这些头文件即笔记载体，多为带注释的演示片段，**不保证每条款都能独立编译**（如 03 条款含同名变量重定义、05 条款是半成品、06–09 是纯注释）。保持原文，供阅读与按需抽取。
