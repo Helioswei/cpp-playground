@@ -2,6 +2,11 @@
 
 个人 C++ 学习积累库（monorepo）。原五个独立开源仓库合并而来，统一用 [xmake](https://xmake.io) 构建。
 
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Language: C++](https://img.shields.io/badge/language-C%2B%2B-blueviolet.svg)
+![Build: xmake](https://img.shields.io/badge/build-xmake-2f93e0)
+![Monorepo: 5 repos merged](https://img.shields.io/badge/monorepo-5_repos_merged-lightgrey)
+
 ## 目录结构与源仓库对照
 
 | 模块 | 源仓库 | 内容 |
